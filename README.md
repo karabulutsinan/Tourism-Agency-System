@@ -42,10 +42,10 @@
   ![img.png](search.png)
     - selecting the accommodation type and calculating the price,
 
-  ![![reservationdetails.png](reservationdetails.png)
+  ![reservationdetails.png](reservationdetails.png)
     - and providing the customer's information.
 
-  !![guestdetails.png](guestdetails.png)
+  ![guestdetails.png](guestdetails.png)
 
     - #### Log:
         - Here, the employee can see:
