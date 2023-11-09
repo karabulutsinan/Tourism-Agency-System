@@ -568,17 +568,22 @@ public class EmployeeGUI extends JFrame {
                     Date offSeasonStart = Helper.stringToDate(fieldOffSeasonStartDate.getText());
                     Date offSeasonEnd = Helper.stringToDate(fieldOffSeasonEndDate.getText());
 
-                    if (EmployeeOp.updateHotelDetails(id, name, city, district, star, address, mail, phone, parking, wifi, pool, gym, concierge, spa, roomService) &&
-                            EmployeeOp.updateHotelPeriodDetails(id, seasonStart, seasonEnd, offSeasonStart, offSeasonEnd)) {
+                    if (EmployeeOp.updateHotelDetails(id, name, city, district, star, address, mail, phone, parking, wifi, pool, gym, concierge, spa, roomService)
+                            && EmployeeOp.updateHotelPeriodDetails(id, seasonStart, seasonEnd, offSeasonStart, offSeasonEnd)
+                            && EmployeeOp.updateRoomSalesDate(seasonStart, seasonEnd, id, "Season")
+                            && EmployeeOp.updateRoomSalesDate(offSeasonStart, offSeasonEnd, id, "Off Season")) {
                         Helper.showMessage("done");
                         loadHotelModel();
+                        loadSalesRoomModel();
 
                         Helper.resetFormFields(fieldHotelName, fieldHotelCity, fieldHotelAddress, fieldHotelDistrict, fieldHotelMail, fieldHotelPhone, fieldHotelStar);
                         Helper.resetCheckBoxes(checkBoxPool, checkBoxWifi, checkBoxParking, checkBoxGym, checkBoxConcierge, checkBoxSpa, checkBoxRoomService);
                         Helper.resetTextFields(fieldSeasonStartDate, fieldSeasonEndDate, fieldOffSeasonStartDate, fieldOffSeasonEndDate);
                         Helper.resetRadioButtons(radioButtonSeason, radioButtonOffSeason);
                     }
+
                     scrollPaneHotelDetails.getVerticalScrollBar().setValue(0);
+
                 }
             }
         });
@@ -743,7 +748,10 @@ public class EmployeeGUI extends JFrame {
                     if (EmployeeOp.updateRoomDetails(hotel_id, room_type_id, seasonStock, offSeasonStock, bed, size, tv, minibar)) {
                         Helper.showMessage("done");
                         loadSalesRoomModel();
+                    }else {
+                        Helper.showMessage("error");
                     }
+
                     scrollPaneHotelDetails.getVerticalScrollBar().setValue(0);
 
                 }
