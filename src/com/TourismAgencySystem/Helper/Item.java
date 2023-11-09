@@ -1,4 +1,4 @@
-package Helper;
+package com.TourismAgencySystem.Helper;
 
 public class Item {
     private int key;
@@ -16,6 +16,9 @@ public class Item {
     public void setKey(int key) {
         this.key = key;
     }
+    public String toString(){
+        return this.value;
+    }
 
     public String getValue() {
         return value;
@@ -23,8 +26,5 @@ public class Item {
 
     public void setValue(String value) {
         this.value = value;
-    }
-    public String toString(){
-        return this.value;
     }
 }
