@@ -53,7 +53,10 @@ public class Helper {
     public static boolean isFieldEmpty(JTextArea area) {
         return area.getText().trim().isEmpty();
     }
-
+    //Form 19
+    //Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor mu?
+    //Form 20
+    //Kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor mu?
     public static void showMessage(String str) {
         optionPage();
         String msg;
@@ -83,7 +86,11 @@ public class Helper {
         UIManager.put("OptionPane.yesButtonText", "YES");
         UIManager.put("OptionPane.noButtonText", "NO");
     }
+    //Form 19
+    //Kullanıcıya başarılı işlemler için uygun pop up mesajları veriliyor mu?
 
+    //Form 20
+    //Kullanıcıya hatalı işlemler için uygun hata mesajları veriliyor mu?
     public static boolean confirm(String str) {
         String msg;
         switch (str) {
@@ -158,6 +165,8 @@ public class Helper {
         int daysBetween = (int) ChronoUnit.DAYS.between(date1, date2);
         return daysBetween;
     }
+    //Form 15
+    //Misafir bilgisi, kalınacak gece sayısı ve pansiyon tipine göre konaklamaya ait fiyat başarılı bir şekilde hesaplanıyor mu?
     public static int resPrice(JTextField adultNumber,JTextField childNumber,int adultPrice , int childPrice,int duration){
         int a=  Integer.parseInt(adultNumber.getText());
         int b=  Integer.parseInt(childNumber.getText());
@@ -167,17 +176,7 @@ public class Helper {
 
         return  totalPrice*duration ;
     }
-    public static void visibleTextFields(JTextField... dateFields) {
-        for (JTextField field : dateFields) {
-            field.setVisible(true);
-        }
-    }
 
-    public static void visibleComboBoxes(JComboBox... comboBoxes) {
-        for (JComboBox box : comboBoxes) {
-            box.setVisible(true);
-        }
-    }
     public static void visibleJLabel(JLabel... JLabels) {
         for (JLabel lbl : JLabels) {
             lbl.setVisible(true);

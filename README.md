@@ -4,6 +4,7 @@
 ## Project Description:
 - This is a project for our Patika+ Bootcamp, in which we have to develop a system for a tourism agency.
 - The system must be able to manage the agency's customers, employees, and reservations.
+- Short video description in Turkish can be found at:
 
 ## Project Structure:
 - There are two main user types, admin and agency employee.

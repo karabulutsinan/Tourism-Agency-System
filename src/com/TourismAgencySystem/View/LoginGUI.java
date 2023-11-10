@@ -27,6 +27,9 @@ public class LoginGUI extends JFrame {
         setTitle(Config.PROJECT_TITLE);
         setResizable(false);
         setVisible(true);
+        //Forn 8
+        //Login işleminde kullanıcının kaydı olup olmadığı kontrol ediliyor mu,
+        // kaydı yoksa ya da hatalı giriş yapıldıysa kullanıcıya hatalı giriş mesajı veriliyor mu?
         buttonLogin.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -50,6 +53,10 @@ public class LoginGUI extends JFrame {
                 }
             }
         });
+
+
+        // Değerlendirme Formu 8
+        // Login işleminde kullanıcının kaydı olup olmadığı kontrol ediliyor mu, kaydı yoksa ya da hatalı giriş yapıldıysa kullanıcıya hatalı giriş mesajı veriliyor mu?
         fieldPassword.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -76,6 +83,8 @@ public class LoginGUI extends JFrame {
                 }
             }
         });
+        // Değerlendirme Formu 8
+        // Login işleminde kullanıcının kaydı olup olmadığı kontrol ediliyor mu, kaydı yoksa ya da hatalı giriş yapıldıysa kullanıcıya hatalı giriş mesajı veriliyor mu?
         fieldUsername.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
