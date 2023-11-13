@@ -46,7 +46,7 @@
   ![reservationdetails.png](static/reservationdetails.png)
     - and providing the customer's information.
 
-  ![guestdetails.png](static/guestdetails.png)
+  ![guestdetails.PNG](static%2Fguestdetails.PNG)
 
     - #### Log:
         - Here, the employee can see:
